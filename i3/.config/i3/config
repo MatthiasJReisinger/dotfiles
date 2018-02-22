@@ -183,7 +183,7 @@ bar {
     }
 }
 
-bindsym $mod+Shift+x exec i3lock
+bindsym $mod+Shift+x exec i3lock --color 000000
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ #increase sound volume
