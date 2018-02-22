@@ -199,6 +199,8 @@ bindsym $mod+Shift+p move workspace to output right
 
 new_window none
 
+assign [class="Gvim"] $workspace2
+
 assign [class="Spotify"] $workspace4
 for_window [class="Spotify"] move to workspace "4: music"
 
