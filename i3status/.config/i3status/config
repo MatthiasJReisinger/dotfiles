@@ -6,9 +6,9 @@ general {
 order += "disk /"
 order += "wireless wlp4s0"
 order += "ethernet enp0s31f6"
-order += "battery 0"
-order += "cpu_usage"
 order += "volume master"
+order += "cpu_usage"
+order += "battery 0"
 order += "tztime local"
 
 wireless wlp4s0 {
