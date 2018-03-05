@@ -7,7 +7,7 @@ export ZSH=/home/matthias/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME=""
+ZSH_THEME="refined"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -66,8 +66,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-autoload -U promptinit; promptinit
-prompt pure
+eval $(keychain --eval --quiet id_rsa)
 
 export PATH=~/.npm-global/bin:$PATH
 
@@ -76,8 +75,6 @@ export PATH=~/.npm-global/bin:$PATH
 # yet that familiar with the different files that are sourced by zsh,
 # therefore it seemed like a good idea to put this export here.
 export PATH="$HOME/.cargo/bin:$PATH"
-
-eval `dircolors ~/.dir_colors/dircolors`
 
 export CC='clang'
 export CXX='clang++'
