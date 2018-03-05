@@ -109,7 +109,7 @@ export CXX='clang++'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias g="xdotool search --name \"/* - GVIM\" windowactivate; gvim --remote-silent"
+alias g="gvim --remote-silent"
 
 # Remove all docker contaienrs
 alias drc='docker container rm $(docker container ls -a -q)'
@@ -126,4 +126,4 @@ alias drv="docker volume rm "
 alias cb="cargo build"
 alias cr="RUST_BACKTRACE=1 cargo run"
 alias ct="cargo test"
-alias ct="cargo clean"
+alias cc="cargo clean"
