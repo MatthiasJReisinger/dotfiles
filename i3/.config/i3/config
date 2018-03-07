@@ -172,6 +172,8 @@ client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color
 bar {
     status_command i3status
     position top
+    font pango:Hack 11
+    separator_symbol "|"
     colors {
         background $bg-color
         separator #757575
