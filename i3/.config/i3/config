@@ -92,35 +92,37 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1: terminal"
-set $workspace2 "2: vim"
-set $workspace3 "3: firefox"
-set $workspace4 "4: music"
-set $workspace5 "5: chat"
+# variables for convenient reference to workspaces
+set $ws_terminal "1: terminal"
+set $ws_vim "2: vim"
+set $ws_firefox "3: firefox"
+set $ws_music "4: music"
+set $ws_mail "5: mail"
+set $ws_chat "6: chat"
 
 # switch to workspace
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace 6
+bindsym $mod+1 workspace $ws_terminal
+bindsym $mod+2 workspace $ws_vim
+bindsym $mod+3 workspace $ws_firefox
+bindsym $mod+4 workspace $ws_music
+bindsym $mod+6 workspace $ws_chat
+bindsym $mod+5 workspace $ws_mail
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace $workspace5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -200,16 +202,15 @@ bindsym $mod+Shift+p move workspace to output right
 
 new_window none
 
-assign [class="Gvim"] $workspace2
+# assign applications types to workspaces
+assign [class="Gvim"] $ws_vim
+assign [class="Spotify"] $ws_music
+for_window [class="Spotify"] move to workspace $ws_music
+assign [class="Slack"] $ws_chat
+assign [class="Franz"] $ws_chat
 
-assign [class="Spotify"] $workspace4
-for_window [class="Spotify"] move to workspace "4: music"
-
-assign [class="Slack"] $workspace5
-assign [class="Franz"] $workspace5
-
+# autostart
 exec --no-startup-id dropbox start
 exec --no-startup-id i3-msg 'workspace "1: terminal"; exec gnome-terminal -- tmux; workspace "3: firefox"; exec firefox; workspace "4: music"; exec spotify, exec gnome-terminal -- alsamixer; workspace "1: terminal"'
-
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/main.jpg
 exec_always --no-startup-id ~/.config/i3/xsetup.sh
