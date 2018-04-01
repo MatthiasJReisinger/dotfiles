@@ -16,6 +16,7 @@ wireless wlp4s0 {
     format_up = " %ip [%essid%quality]"
     format_down = " down"
     color_bad = "#f3f4f5"
+    color_degraded = "#f3f4f5"
 }
 
 ethernet enp0s31f6 {
