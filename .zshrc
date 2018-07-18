@@ -122,5 +122,5 @@ alias drv="docker volume rm "
 
 alias cb="cargo build"
 alias cr="RUST_BACKTRACE=1 cargo run"
-alias ct="cargo test"
+alias ct="RUST_BACKTRACE=1 cargo test"
 alias cc="cargo clean"
