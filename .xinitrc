@@ -36,4 +36,10 @@ fi
 
 setxkbmap de
 dbus-update-activation-environment --all
+
+xset b off
+xinput set-prop 'Synaptics TM3289-002' 'libinput Natural Scrolling Enabled' 1
+xinput set-prop 'Synaptics TM3289-002' 'libinput Tapping Enabled' 1
+~/.screenlayout/my.sh
+
 exec i3
