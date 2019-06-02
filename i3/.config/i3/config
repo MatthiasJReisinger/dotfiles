@@ -217,5 +217,6 @@ assign [class="Franz"] $ws_chat
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id pasystray
 exec --no-startup-id dropbox start
+exec --no-startup-id redshift
 exec --no-startup-id i3-msg 'workspace "1: terminal"; exec gnome-terminal -- tmux; workspace "3: firefox"; exec firefox; workspace "1: terminal"'
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/main.jpg
