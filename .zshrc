@@ -68,7 +68,7 @@ source $ZSH/oh-my-zsh.sh
 
 eval $(keychain --eval --quiet id_rsa)
 
-export PATH=~/.npm-global/bin:$PATH
+source /usr/share/nvm/init-nvm.sh
 
 # This PATH export was originally added to ~/.profile by the rust-lang install
 # script obtained from https://www.rust-lang.org/en-US/install.html. I am not
@@ -122,4 +122,9 @@ alias drv="docker volume rm "
 
 alias cb="cargo build"
 alias cr="RUST_BACKTRACE=1 cargo run"
-alias ct="RUST_BACKTRACE=1 cargo test"
+alias ct="cargo test"
+alias cxb="cargo xbuild"
+alias cxr="RUST_BACKTRACE=1 cargo xrun"
+alias cxt="cargo xtest"
+
+alias sp="sudo -E pacman"
