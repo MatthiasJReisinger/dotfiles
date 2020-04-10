@@ -37,6 +37,11 @@ fi
 setxkbmap de
 dbus-update-activation-environment --all
 
+# start gnome-keyring-daemon to ensure that the default-keyring is unlocked automatically at login
+# based on https://wiki.archlinux.org/index.php/GNOME/Keyring#xinitrc_method
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
 xset b off
 xinput set-prop 'Synaptics TM3289-002' 'libinput Natural Scrolling Enabled' 1
 xinput set-prop 'Synaptics TM3289-002' 'libinput Tapping Enabled' 1
