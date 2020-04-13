@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/matthias/.oh-my-zsh
@@ -69,12 +69,6 @@ source $ZSH/oh-my-zsh.sh
 eval $(keychain --eval --quiet id_rsa)
 
 source /usr/share/nvm/init-nvm.sh
-
-# This PATH export was originally added to ~/.profile by the rust-lang install
-# script obtained from https://www.rust-lang.org/en-US/install.html. I am not
-# yet that familiar with the different files that are sourced by zsh,
-# therefore it seemed like a good idea to put this export here.
-export PATH="$HOME/.cargo/bin:$PATH"
 
 export CC='clang'
 export CXX='clang++'
