@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.cargo/bin:$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.poetry/bin:$(ruby -e 'puts Gem.user_dir')/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/matthias/.oh-my-zsh
@@ -115,7 +115,7 @@ alias dri="docker image rm "
 alias drv="docker volume rm "
 
 alias cb="cargo build"
-alias cr="RUST_BACKTRACE=1 cargo run"
+alias cr="cargo run"
 alias ct="cargo test"
 alias cxb="cargo xbuild"
 alias cxr="RUST_BACKTRACE=1 cargo xrun"
