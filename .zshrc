@@ -59,7 +59,7 @@ ZSH_THEME="refined"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+    git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -122,3 +122,8 @@ alias cxr="RUST_BACKTRACE=1 cargo xrun"
 alias cxt="cargo xtest"
 
 alias sp="sudo -E pacman"
+
+# enable pyenv - this has to be placed "toward the end of" .zshrc (see https://github.com/pyenv/pyenv)
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
