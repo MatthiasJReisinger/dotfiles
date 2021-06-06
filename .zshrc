@@ -73,6 +73,13 @@ source /usr/share/nvm/init-nvm.sh
 export CC='clang'
 export CXX='clang++'
 
+# CPLEX (see https://coin-or.github.io/pulp/guides/how_to_configure_solvers.html#cplex)
+export CPLEX_HOME="/opt/ibm/ILOG/CPLEX_Studio201/cplex"
+export CPO_HOME="/opt/ibm/ILOG/CPLEX_Studio201/cpoptimizer"
+export PATH="${PATH}:${CPLEX_HOME}/bin/x86-64_linux:${CPO_HOME}/bin/x86-64_linux"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${CPLEX_HOME}/bin/x86-64_linux:${CPO_HOME}/bin/x86-64_linux"
+export PYTHONPATH="${PYTHONPATH}:/opt/ibm/ILOG/CPLEX_Studio201/cplex/python/3.5/x86-64_linux"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -124,6 +131,4 @@ alias cxt="cargo xtest"
 alias sp="sudo -E pacman"
 
 # enable pyenv - this has to be placed "toward the end of" .zshrc (see https://github.com/pyenv/pyenv)
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-fi
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
