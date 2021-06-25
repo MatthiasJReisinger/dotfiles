@@ -131,4 +131,4 @@ alias cxt="cargo xtest"
 alias sp="sudo -E pacman"
 
 # enable pyenv - this has to be placed "toward the end of" .zshrc (see https://github.com/pyenv/pyenv)
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+eval "$(pyenv init -)"
