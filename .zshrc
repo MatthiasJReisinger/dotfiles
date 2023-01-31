@@ -66,7 +66,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-eval $(keychain --eval --quiet id_rsa)
+eval $(keychain --eval --quiet id_rsa id_ed25519)
 
 source /usr/share/nvm/init-nvm.sh
 
@@ -78,7 +78,7 @@ export CPLEX_HOME="/opt/ibm/ILOG/CPLEX_Studio201/cplex"
 export CPO_HOME="/opt/ibm/ILOG/CPLEX_Studio201/cpoptimizer"
 export PATH="${PATH}:${CPLEX_HOME}/bin/x86-64_linux:${CPO_HOME}/bin/x86-64_linux"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${CPLEX_HOME}/bin/x86-64_linux:${CPO_HOME}/bin/x86-64_linux"
-export PYTHONPATH="${PYTHONPATH}:/opt/ibm/ILOG/CPLEX_Studio201/cplex/python/3.5/x86-64_linux"
+export PYTHONPATH="${PYTHONPATH}:/opt/ibm/ILOG/CPLEX_Studio201/cplex/python/3.8/x86-64_linux"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -129,6 +129,7 @@ alias cxr="RUST_BACKTRACE=1 cargo xrun"
 alias cxt="cargo xtest"
 
 alias sp="sudo -E pacman"
+alias gti="git"
 
 # enable pyenv - this has to be placed "toward the end of" .zshrc (see https://github.com/pyenv/pyenv)
 eval "$(pyenv init -)"
