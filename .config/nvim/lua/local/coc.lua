@@ -77,11 +77,6 @@ keyset("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
 -- Formatting
 keyset("n", "<leader>cf", ":Format<cr>", {silent = true})
 keyset("x", "<leader>cf", "<Plug>(coc-format-selected)", {silent = true})
-vim.api.nvim_create_autocmd("BufWrite", {
-  pattern = "*",
-  command = "call CocAction('format')",
-})
-
 
 -- Setup formatexpr specified filetype(s)
 vim.api.nvim_create_autocmd("FileType", {
