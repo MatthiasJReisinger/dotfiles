@@ -48,6 +48,10 @@ LUA
 
 if exists("g:neovide")
     let g:neovide_cursor_animation_length=0
+    let g:neovide_scroll_animation_length = 0
+    let g:neovide_floating_blur_amount_x = 0
+    let g:neovide_floating_blur_amount_y = 0
+    let g:neovide_floating_shadow = v:false
     set guifont=Hack\ Nerd\ Font:h11
 endif
 
