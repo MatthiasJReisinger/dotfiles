@@ -1,4 +1,17 @@
 {
-    "javascript.format.enable": false,
-    "typescript.format.enable": false
+  "inlayHint.enable": true,
+  "coc.preferences.formatOnSave": true,
+  "codeLens.enable": true,
+  "codeLens.position": "eol",
+  "rust-analyzer.lens.enable": true,
+  "rust-analyzer.lens.implementations.enable": true,
+  "rust-analyzer.enable": true,
+  "rust-analyzer.cargo.buildScripts.enable": true,
+  "rust-analyzer.procMacro.attributes.enable": true,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.diagnostics.disabled": ["unresolved-proc-macro"],
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "colors.enable": true,
+  "python.formatting.provider": "black"
 }
