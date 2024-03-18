@@ -194,10 +194,14 @@ vim.api.nvim_create_autocmd("User", {
 
 -- default plugins
 vim.g.coc_global_extensions = {
-        'coc-json',
-        'coc-rust-analyzer',
         'coc-spell-checker',
+        'coc-rust-analyzer',
+        'coc-prettier',
         'coc-yaml',
+        'coc-tsserver',
         'coc-toml',
-        'coc-clangd'
+        'coc-json',
+        'coc-clangd',
+        '@yaegassy/coc-tailwindcss3',
+        'coc-pyright'
     }
